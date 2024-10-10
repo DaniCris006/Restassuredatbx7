@@ -6,12 +6,17 @@ import org.testng.annotations.Test;
 
 public class RA001 {
     public static void main(String[] args) {
-        System.out.println("Hello World ");
+        //Get Request Example
+        //Gherkins Syntax:
+        //Given() - url,body[Payload],header,
+        //When() - Method [get(),post(),put(),delete()]
+        //Then() - Validation [Verify the given output LHS=RHS]
         RestAssured
                 .given().baseUri("https://restful-booker.herokuapp.com")
                 .basePath("/booking/1").log().all()
                         .when().get()
-                        .then().statusCode(200);
+                        .then().log().all() //log().all() is to see the value in Terminal
+                        .statusCode(200);
         RequestSpecification r= RestAssured.given();
         r.basePath("");
     }

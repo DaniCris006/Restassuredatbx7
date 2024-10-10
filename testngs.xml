@@ -3,9 +3,10 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/crisk/IdeaProjects/APIAutomationProgram">
         <classes>
-            <class name="org.example.WOMainfuntion.Test01">
+            <class name="org.example.CRUD.Get.JJIStest">
                 <methods>
-                    <include name="test_1"/>
+
+                    <include name="user"/>
                 </methods>
             </class>
         </classes>
